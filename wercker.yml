@@ -14,4 +14,6 @@ gen-image:
     - script:
         code: |
           lein run -m tweegeemee.onetime/mymain
-          mv output.png $WERCKER_REPORT_ARTIFACTS_DIR/
+          ls -lah
+          cp output.png $WERCKER_REPORT_ARTIFACTS_DIR/
+          cp output.png $WERCKER_OUTPUT_DIR/

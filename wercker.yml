@@ -8,7 +8,7 @@ build:
         code: |
           python gen_code.py > src/tweegeemee/onetime.clj
 
-deploy:
+gen-image:
   box: clojure
   steps:
     - script:

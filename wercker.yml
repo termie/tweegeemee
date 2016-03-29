@@ -1,0 +1,17 @@
+no-response-timeout: 60
+command-timeout: 60
+build:
+  box: python:2.7
+  steps:
+    - pip-install
+    - script:
+        code: |
+          python gen_code.py > src/tweegeemee/onetime.clj
+
+deploy:
+  box: clojure
+  steps:
+    - script:
+        code: |
+          lein run -m tweegeemee.onetime/mymain
+          mv output.png $WERCKER_REPORT_ARTIFACTS_DIR/

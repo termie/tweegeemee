@@ -22,8 +22,8 @@ push-to-quay:
     box: nginx
     steps:
       - script:
+          name: list dir
           code: |
-            ls -la /pipeline
             ls -la /pipeline/source
       - internal/docker-push:
           repository: quay.io/wercker/tweegeemee

@@ -17,3 +17,18 @@ gen-image:
           ls -lah
           cp output.png $WERCKER_REPORT_ARTIFACTS_DIR/
           cp output.png $WERCKER_OUTPUT_DIR/
+
+push-to-quay:
+    box: nginx
+    steps:
+      - script:
+          code: |
+            ls -la /pipeline
+            ls -la /pipeline/source
+      - internal/docker-push:
+          repository: quay.io/wercker/tweegeemee
+          username: $DOCKER_USERNAME
+          password: $DOCKER_PASSWORD
+          registry: quay.io
+          tag: latest
+

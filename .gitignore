@@ -13,3 +13,4 @@ profiles.clj
 images/*.clj
 images/*.png
 .wercker
+vendor/*/

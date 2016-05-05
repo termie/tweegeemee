@@ -26,10 +26,11 @@ func main() {
 	clientConfig := werckerclient.Config{
 		Endpoint: werckerEndpoint,
 	}
-	client := werckerclient.NewClient(clientConfig)
+	client := werckerclient.NewClient(&clientConfig)
 	opts := werckerclient.CreateRunOptions{
 		ApplicationID: applicationID,
-		TargetID:      targetID,
+		PipelineID:    targetID,
+		Branch:        "werckerize",
 	}
 
 	v := url.Values{}
@@ -49,6 +50,16 @@ func main() {
 			for _, e := range f.Entities.Urls {
 				fmt.Printf("  %s\n", e.Expanded_url)
 			}
+			url := f.Entities.Urls[0].Expanded_url
+			opts.EnvVars = werckerclient.EnvVarFromMap(map[string]string{
+				"TGM_URL": url,
+			})
+			r, err := client.CreateRun(&opts)
+			if err != nil {
+				panic(err)
+			}
+			fmt.Printf("%+v\n", r)
+
 			return
 		}
 	}

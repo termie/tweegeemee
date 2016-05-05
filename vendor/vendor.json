@@ -1,0 +1,65 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "KnxORlhfLzZ4XMYBcmA26w9HDyE=",
+			"path": "github.com/ChimeraCoder/anaconda",
+			"revision": "afffdbac178c0e78746ea42d7c1af963cb7ef28e",
+			"revisionTime": "2016-01-15T15:20:52Z"
+		},
+		{
+			"checksumSHA1": "xE9Zo5ubzdEVBeRf+yD/ZjLALHk=",
+			"path": "github.com/ChimeraCoder/tokenbucket",
+			"revision": "c5a927568de7aad8a58127d80bcd36ca4e71e454",
+			"revisionTime": "2013-12-01T22:36:12Z"
+		},
+		{
+			"checksumSHA1": "3RgReu+42CU1EQ6afDsVSvBuPyk=",
+			"path": "github.com/azr/backoff",
+			"revision": "53511d3c733003985b0b76f733df1f4d0095ee6a",
+			"revisionTime": "2016-01-15T11:51:03Z"
+		},
+		{
+			"checksumSHA1": "0hYljvhDSXLqjrEPqRvz9O4hsjw=",
+			"path": "github.com/dustin/go-jsonpointer",
+			"revision": "2efc9fef1d9421a8d252a32e20beb10cecd2bbca",
+			"revisionTime": "2015-08-14T06:45:24Z"
+		},
+		{
+			"checksumSHA1": "2138MttIW/b+UkA4YMYcTc6yzOU=",
+			"path": "github.com/dustin/gojson",
+			"revision": "2e71ec9dd5adce3b168cd0dbde03b5cc04951c30",
+			"revisionTime": "2016-03-07T16:12:27Z"
+		},
+		{
+			"checksumSHA1": "PYBCaIzh3RFkxtkkP8x4XCEYLCg=",
+			"path": "github.com/garyburd/go-oauth/oauth",
+			"revision": "719b069913e1151a73ea30d2ea4f90deda3ce234",
+			"revisionTime": "2016-04-12T16:13:20Z"
+		},
+		{
+			"checksumSHA1": "jkApfdCvJ5J0NO703HWbjk+pgSk=",
+			"path": "github.com/jtacoma/uritemplates",
+			"revision": "802b8e24dbf0f556badb3a1401a49f6bfda80ca6",
+			"revisionTime": "2015-10-14T17:53:35Z"
+		},
+		{
+			"checksumSHA1": "W8DqGfjEI0939tslU2B7tZ9oYpI=",
+			"path": "github.com/wercker/werckerclient",
+			"revision": "78817ebfc131d02804e532d6b747f26fa181e124",
+			"revisionTime": "2016-05-05T00:26:28Z",
+			"version": "runs",
+			"versionExact": "runs"
+		},
+		{
+			"checksumSHA1": "R/BsjgKdtow460lZt98+bb2x0uU=",
+			"path": "github.com/wercker/werckerclient/credentials",
+			"revision": "78817ebfc131d02804e532d6b747f26fa181e124",
+			"revisionTime": "2016-05-05T00:26:28Z",
+			"version": "runs",
+			"versionExact": "runs"
+		}
+	],
+	"rootPath": "github.com/termie/tweegeemee"
+}

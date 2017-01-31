@@ -54,13 +54,14 @@ func main() {
 			opts.EnvVars = werckerclient.EnvVarFromMap(map[string]string{
 				"TGM_URL": url,
 			})
+			fmt.Printf("%+v\n", opts)
 			r, err := client.CreateRun(&opts)
 			if err != nil {
 				panic(err)
 			}
 			fmt.Printf("%+v\n", r)
 
-			return
+			// return
 		}
 	}
 

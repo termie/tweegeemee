@@ -39,26 +39,28 @@
 			"revisionTime": "2016-04-12T16:13:20Z"
 		},
 		{
-			"checksumSHA1": "jkApfdCvJ5J0NO703HWbjk+pgSk=",
+			"checksumSHA1": "lnktSpRbwGSJKg+bRH2DJdP3iX0=",
 			"path": "github.com/jtacoma/uritemplates",
-			"revision": "802b8e24dbf0f556badb3a1401a49f6bfda80ca6",
-			"revisionTime": "2015-10-14T17:53:35Z"
+			"revision": "307ae868f90f4ee1b73ebe4596e0394237dacce8",
+			"revisionTime": "2016-07-02T15:35:54Z",
+			"version": "v1.0.0",
+			"versionExact": "v1.0.0"
 		},
 		{
-			"checksumSHA1": "W8DqGfjEI0939tslU2B7tZ9oYpI=",
+			"checksumSHA1": "87/cm+wneq0zEZwbcjvZkDlxhhY=",
 			"path": "github.com/wercker/werckerclient",
-			"revision": "78817ebfc131d02804e532d6b747f26fa181e124",
-			"revisionTime": "2016-05-05T00:26:28Z",
-			"version": "runs",
-			"versionExact": "runs"
+			"revision": "4050d6ae21363422bed11b052f73399aa13b64f1",
+			"revisionTime": "2017-01-12T01:21:47Z",
+			"version": "master",
+			"versionExact": "master"
 		},
 		{
 			"checksumSHA1": "R/BsjgKdtow460lZt98+bb2x0uU=",
 			"path": "github.com/wercker/werckerclient/credentials",
-			"revision": "78817ebfc131d02804e532d6b747f26fa181e124",
-			"revisionTime": "2016-05-05T00:26:28Z",
-			"version": "runs",
-			"versionExact": "runs"
+			"revision": "4050d6ae21363422bed11b052f73399aa13b64f1",
+			"revisionTime": "2017-01-12T01:21:47Z",
+			"version": "master",
+			"versionExact": "master"
 		}
 	],
 	"rootPath": "github.com/termie/tweegeemee"

@@ -1,18 +1,20 @@
 import json
-import urlparse
 import os
+import sys
+import urlparse
 
 import requests
 
 TEST_URL="https://gist.github.com/rogerallen/e21aaff6d8cea388d316#file-1_archive-edn-L1193-L1195"
 TEST_URL="https://gist.github.com/rogerallen/42ca73fee10cdbf0ab41905d0c80672a#file-1_archive-edn-L1469-L1471"
 #URL="https://gist.github.com/rogerallen/e21aaff6d8cea388d316#file-1_archive-edn-L1607-L1609"
-URL=os.environ.get("TGM_URL", TEST_URL)
+#URL=os.environ.get("TGM_URL", TEST_URL)
 
 GIST_API="https://api.github.com/gists/%s"
 
 def main():
-  o = urlparse.urlparse(URL)
+  url = sys.argv[1]
+  o = urlparse.urlparse(url)
   frag = o.fragment
   gist_id = o.path.split("/")[-1]
 

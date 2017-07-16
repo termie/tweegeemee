@@ -1,13 +1,26 @@
 no-response-timeout: 60
 command-timeout: 60
-build:
+
+# Run this on a cronjob
+gen-urls:
   box: python:2.7
   steps:
     - pip-install
     - script:
         code: |
-          python gen_code.py > src/tweegeemee/onetime.clj
+          python gen_urls.py
 
+# Run this for each new url
+gen-code:
+  box: python:2.7
+  steps:
+    - pip-install
+    - script:
+        code: |
+          python gen_code.py $TGM_URL > src/tweegeemee/onetime.clj
+
+
+# This chains from gen-code
 gen-image:
   box: clojure
   steps:

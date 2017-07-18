@@ -7,8 +7,15 @@ gen-urls:
   steps:
     - pip-install
     - script:
+        name: generate the urls and filter
         code: |
-          python gen_urls.py
+          python gen_urls.py > urls
+    - script:
+        name: trigger the runs
+        code: |
+          for x in $(cat urls); do
+            ./manual.sh $x
+          done
 
 # Run this for each new url
 gen-code:

@@ -1,12 +1,13 @@
 import os
 import pprint
 
+import boto
 import twitter
 
 def url2name(s):
     # url like:
     # "https://gist.github.com/rogerallen/e13d3564f39a4102e5effd17f5334f14#file-1_archive-edn-L830-L832"
-    last = s.split("/")[-1]
+    s = s.split("/")[-1]
     s = s.replace("#file-1_archive-edn", "")
     return s
 
@@ -17,13 +18,13 @@ def main():
     access_token=os.environ.get("TWITTER_ACCESS_TOKEN")
     access_token_secret=os.environ.get("TWITTER_ACCESS_TOKEN_SECRET")
 
-
     api = twitter.Api(consumer_key=consumer_key,
                       consumer_secret=consumer_secret,
                       access_token_key=access_token,
                       access_token_secret=access_token_secret)
 
-    favs = api.GetFavorites(screen_name='termie', count=200)
+    #favs = api.GetFavorites(screen_name='termie', count=200)
+    favs = api.GetFavorites(screen_name='termie')
     #pprint.pprint(favs)
     urls = []
     for fav in favs:
@@ -31,7 +32,18 @@ def main():
             continue
         urls.append(fav.urls[0].expanded_url)
 
+    access_key_id=os.environ.get("AWS_ACCESS_KEY_ID")
+    secret_access_key=os.environ.get("AWS_SECRET_ACCESS_KEY")
+    s3 = boto.connect_s3(access_key_id, secret_access_key)
+    b = s3.get_bucket(os.environ.get("AWS_BUCKET"))
+    keys = b.list()
+
+    names = [k.name for k in keys]
+
     for u in urls:
+        name = url2name(u)
+        if name in names:
+            continue
         print u
 
 if __name__ == '__main__':

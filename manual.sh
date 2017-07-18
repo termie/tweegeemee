@@ -8,7 +8,7 @@ echo NAME=$NAME
 
 curl -H "Authorization: Bearer $WERCKER_TOKEN" \
      -H "Content-Type: application/json" \
-     -d "{\"pipelineId\": \"$PIPELINE_ID\", \"branch\": \"werckerize\", \"envVars\": [{\"key\": \"TGM_URL\", \"value\": \"$URL\"}, {\"key\": \"TGM_NAME\", \"value\": \"$NAME\"}]}" \
+     -d "{\"pipelineId\": \"$PIPELINE_ID\", \"branch\": \"werckerize\", \"message\": \"Triggering build for $NAME\", \"envVars\": [{\"key\": \"TGM_URL\", \"value\": \"$URL\"}, {\"key\": \"TGM_NAME\", \"value\": \"$NAME\"}]}" \
      https://app.wercker.com/api/v3/runs
 
 

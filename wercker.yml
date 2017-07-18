@@ -14,6 +14,13 @@ gen-urls:
 gen-code:
   box: python:2.7
   steps:
+    - script:
+        name: check for tgm url
+        code: |
+          if [ -z "$TGM_URL" ]; then
+            echo "No TGM_URL, aborting" > $WERCKER_REPORT_MESSAGE_FILE
+            false
+          fi
     - pip-install
     - script:
         code: |

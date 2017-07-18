@@ -29,4 +29,13 @@ gen-image:
           lein run -m tweegeemee.onetime/mymain
           ls -lah
           cp output.png $WERCKER_REPORT_ARTIFACTS_DIR/
-          cp output.png $WERCKER_OUTPUT_DIR/
+          cp output.png $WERCKER_OUTPUT_DIR/$TGM_NAME
+
+upload-image:
+  box: alpine:3.2
+  steps:
+    - s3sync:
+        delete-removed: false
+        bucket-url: $AWS_BUCKET
+        key-id: $AWS_ACCESS_KEY_ID
+        key-secret: $AWS_SECRET_ACCESS_KEY

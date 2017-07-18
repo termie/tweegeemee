@@ -36,7 +36,7 @@ gen-image:
           lein run -m tweegeemee.onetime/mymain
           ls -lah
           cp output.png $WERCKER_REPORT_ARTIFACTS_DIR/
-          cp output.png $WERCKER_OUTPUT_DIR/$TGM_NAME
+          cp output.png $WERCKER_OUTPUT_DIR/$TGM_NAME.png
 
 upload-image:
   box: debian

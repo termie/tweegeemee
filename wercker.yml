@@ -32,7 +32,7 @@ gen-image:
           cp output.png $WERCKER_OUTPUT_DIR/$TGM_NAME
 
 upload-image:
-  box: alpine:3.2
+  box: debian
   steps:
     - s3sync:
         delete-removed: false

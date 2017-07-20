@@ -24,7 +24,7 @@ def main():
                       access_token_secret=access_token_secret)
 
     #favs = api.GetFavorites(screen_name='termie', count=200)
-    favs = api.GetFavorites(screen_name='termie')
+    favs = api.GetFavorites(screen_name='termie', count=200)
     #pprint.pprint(favs)
     urls = []
     for fav in favs:
@@ -41,7 +41,7 @@ def main():
     names = [k.name for k in keys]
 
     for u in urls:
-        name = url2name(u)
+        name = "%s.png" % url2name(u)
         if name in names:
             continue
         print u

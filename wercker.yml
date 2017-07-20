@@ -13,6 +13,7 @@ gen-urls:
     - script:
         name: trigger the runs
         code: |
+          cat urls
           for x in $(cat urls); do
             ./manual.sh $x
           done

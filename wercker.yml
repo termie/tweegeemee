@@ -5,6 +5,7 @@ command-timeout: 60
 gen-urls:
   box: python:2.7
   steps:
+    - termie/auto
     - pip-install
     - script:
         name: generate the urls and filter

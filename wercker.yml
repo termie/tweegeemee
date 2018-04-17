@@ -54,3 +54,4 @@ upload-image:
         bucket-url: $AWS_BUCKET
         key-id: $AWS_ACCESS_KEY_ID
         key-secret: $AWS_SECRET_ACCESS_KEY
+        opts: --no-check-certificate
